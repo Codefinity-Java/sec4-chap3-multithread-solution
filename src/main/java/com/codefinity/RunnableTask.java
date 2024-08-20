@@ -10,7 +10,7 @@ public class RunnableTask {
         }
 
         ForkJoinPool pool = new ForkJoinPool();
-        TaskForkJoin task = new TaskForkJoin(array, 0, array.length);
+        DonationTask task = new DonationTask(array, 0, array.length);
         long result = pool.invoke(task); // Start the task and get the result
 
         System.out.println("Sum: " + result); // Print the result
